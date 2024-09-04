@@ -1,3 +1,11 @@
+data_structure = [
+  [1, 2, 3],
+  {'a': 4, 'b': 5},
+  (6, {'cube': 7, 'drum': 8}),
+  "Hello",
+  ((), [{(2, 'Urban', ('Urban2', 35))}])
+]
+
 def calculate_structure_sum(data_structure):
     sum = 0
     if isinstance(data_structure, dict):
@@ -13,14 +21,5 @@ def calculate_structure_sum(data_structure):
         sum += len(data_structure)
     return sum
 
-# данные взятые из условия задачи
-data_structure = [
-  [1, 2, 3],
-  {'a': 4, 'b': 5},
-  (6, {'cube': 7, 'drum': 8}),
-  "Hello",
-  ((), [{(2, 'Urban', ('Urban2', 35))}])
-]
-# вывод результата программы
 result = calculate_structure_sum(data_structure)
 print(result)
