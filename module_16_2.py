@@ -12,7 +12,7 @@ async def message() -> str:
 
 @app.get('/user/admin')
 async def admin() -> str:
-  return 'Вы вошли как администратор'
+    return 'Вы вошли как администратор'
 
 
 @app.get('/user/{user_id}')
@@ -20,8 +20,8 @@ async def user_id(user_id: Annotated[int, Path(ge=1,
                                                le=100,
                                                description='Enter User ID',
                                                example='55')]
-                  ) -> str:
-  return f'Вы вошли как пользователь № {user_id}'
+                 ) -> str:
+    return f'Вы вошли как пользователь № {user_id}'
 
 
 @app.get('/user/{username}/{age}')
@@ -34,4 +34,4 @@ async def user(username: Annotated[str, Path(min_length=5,
                                         description='Enter age',
                                         example='24')]
                ) -> str:
-  return f'Информация о пользователе. Имя: {username}, Возраст: {age}'
+    return f'Информация о пользователе. Имя: {username}, Возраст: {age}'
