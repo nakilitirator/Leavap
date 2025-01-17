@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Path, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from typing import Annotated, List
+from typing import Annotated
 from pydantic import BaseModel
 
 app = FastAPI()
